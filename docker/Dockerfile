@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-ENV http_proxy 172.16.1.135:3128
-ENV https_proxy 172.16.1.135:3128
+# ENV http_proxy 172.16.1.135:3128
+# ENV https_proxy 172.16.1.135:3128
 
 # Install MMCV, MMDetection and MMSegmentation
 RUN pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6.0/index.html
